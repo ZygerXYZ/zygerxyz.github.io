@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Zyger - 
+    	Verification    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../stylee4da.css?5">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="//use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="//use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script></head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+                <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Zyger</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Services</p>
+                <li >
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="index.html">Verification</a>
+                </li>
+                <li >
+                    <a href="#exchangeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Exchange</a>
+                    <ul class="collapse list-unstyled" id="exchangeSubmenu">
+                        <li >
+                            <a href="../exchange/log/index.html">Log</a>
+                        </li>
+                        <li >
+                            <a href="../exchange/calculator/index.html">Calculator</a>
+                        </li>
+                        <li >
+                            <a href="../exchange/stats/index.html">Stats</a>
+                        </li>
+                                            </ul>
+                </li>
+                <li >
+                    <a href="#domainsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Domains</a>
+                    <ul class="collapse list-unstyled" id="domainsSubmenu">
+                        <li >
+                            <a href="../domains/list/index.html">List</a>
+                        </li>
+                                            </ul>
+                </li>
+                <li >
+                    <a href="#middlemanSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Middleman</a>
+                    <ul class="collapse list-unstyled" id="middlemanSubmenu">
+                        <li >
+                            <a href="../middleman/log/index.html">Log</a>
+                        </li>
+                        <li >
+                            <a href="//middleman/calculator/index.html">Calculator</a>
+                        </li>
+                                            </ul>
+                </li>
+                <li >
+                    <a href="//contact/index.html">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                                <li>
+                    <a href="//login/index.html" class="download">Login</a>
+                </li>
+                            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <h2>Verification</h2>
+            <p>There are many users on discord using various methods of impersonation, so follow the steps below to ensure that you're not talking to one.</p>
+            <div class="line"></div>
+            <p>1) Go to your settings and enable developer mode</p>
+            <p><img class="img-fluid" src="1a.png"></p>
+            <p>2) Right click the discord profile in question and click "Copy ID"</p>
+            <p><img class="img-fluid" src="2.png"></p>
+            <p>3) Paste the copied Discord ID in the text box below</p>
+            <p><input type="text" id="discord" oninput="check();"></p>
+            <p id="result"></p>
+            <div class="line"></div>
+            <p>Do not listen to any of the excuses the impersonator may make to counter this. The verification will always be working.</p>
+            <p>If someone attempts to impersonate me, please notify me about it.</p>
+        </div>
+    </div>
+
+    <!-- Verification JS -->
+    <script>
+        const ACTUAL_ID = "369090722395324416";
+        const RESULT_VALID_MESSAGE = "That is my correct Discord ID.";
+        const RESULT_VALID_COLOR = "#008000";
+        const RESULT_INVALID_MESSAGE = "That is not my Discord ID, it is an impersonator.";
+        const RESULT_INVALID_COLOR = "#ff0000";
+
+        function validate(input) {
+            if(input == ACTUAL_ID) return true;
+            return false;
+        } 
+
+        function check() {
+            var input = document.getElementById("discord").value;
+            if(input == "") {
+                document.getElementById("result").textContent = "";
+                document.getElementById("result").style.color = "";
+                return;
+            }
+
+            if(validate(input)) {
+                document.getElementById("result").textContent = RESULT_VALID_MESSAGE;
+                document.getElementById("result").style.color = RESULT_VALID_COLOR;
+                return;
+            }
+            
+            document.getElementById("result").textContent = RESULT_INVALID_MESSAGE;
+            document.getElementById("result").style.color = RESULT_INVALID_COLOR;
+        }
+    </script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

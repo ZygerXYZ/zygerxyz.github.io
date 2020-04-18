@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Zyger - 
+    	Exchange    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../favicon.png" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="Cross origin">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../../stylee4da.css?5">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="//use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="Cross origin"></script>
+    <script defer src="//use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="Cross origin"></script>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+                <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Zyger</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Services</p>
+                <li >
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li >
+                    <a href="../../verification/index.html">Verification</a>
+                </li>
+                <li class="active">
+                    <a href="#exchangeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Exchange</a>
+                    <ul class="collapse list-unstyled" id="exchangeSubmenu">
+                        <li >
+                            <a href="../log/index.html">Log</a>
+                        </li>
+                        <li >
+                            <a href="../calculator/index.html">Calculator</a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">Stats</a>
+                        </li>
+                                            </ul>
+                </li>
+                <li >
+                    <a href="#domainsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Domains</a>
+                    <ul class="collapse list-unstyled" id="domainsSubmenu">
+                        <li >
+                            <a href="../../domains/list/index.html">List</a>
+                        </li>
+                                            </ul>
+                </li>
+                <li >
+                    <a href="#middlemanSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Middleman</a>
+                    <ul class="collapse list-unstyled" id="middlemanSubmenu">
+                        <li >
+                            <a href="../../middleman/log/index.html">Log</a>
+                        </li>
+                        <li >
+                            <a href="../../middleman/calculator/index.html">Calculator</a>
+                        </li>
+                                            </ul>
+                </li>
+                <li >
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                                <li>
+                    <a href="../../login/index.html" class="download">Login</a>
+                </li>
+                            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../log/index.html">Log</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../calculator/index.html">Calculator</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Stats</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <h2>Stats</h2>
+            <p>Here you can see specific information and statistics about my bitcoin exchange, such as my real time stock of bitcoin.</p>
+            <div class="line"></div>
+
+            <div class="row" style="text-align: center;"> <!-- move this css eventually -->
+                <div class="col-sm-3">
+                    <!-- make variables for the sql results at the top and then echo the variables instead-->
+                    <h4>Total Transactions</h4>
+                    <p>747 Exchanges</p>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Total Sold</h4>
+                    <p>13.68696438 BTC ($96,726.46)</p>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Current Stock</h4>
+                    <p>0 BTC ($0.00)</p>                    </p>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Current BTC Price</h4>
+                    <p>$7,067.05</p>
+                </div>
+            </div>
+            <div class="row" style="text-align: center; margin-top:40px"> <!-- move this css eventually -->
+                <div class="col-sm-5 mx-auto">
+                    <h4>Top 5 Buyers</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Member ID</th>
+                                <th scope="col">Site</th>
+                                <th scope="col">Total BTC Sent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1857</td><td>MC-Market</td><td>1.68024702 ($11,874.39)</td></tr><tr><td>152062</td><td>MC-Market</td><td>0.60763195 ($4,294.17)</td></tr><tr><td>35941</td><td>MC-Market</td><td>0.60540155 ($4,278.40)</td></tr><tr><td>143647</td><td>MC-Market</td><td>0.57924264 ($4,093.54)</td></tr><tr><td>13</td><td>MC-Market</td><td>0.56854236 ($4,017.92)</td></tr>                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-5 mx-auto">
+                    <h4>BTC Sold Past 5 Months</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Month</th>
+                                <th scope="col">BTC Sent</th>
+                                <th scope="col">BTC Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">July 2019</th><td>0.32503118 ($2,297.01)</td><td>0.00073167 ($5.17)</td></tr><tr><th scope="row">June 2019</th><td>0.96252835 ($6,802.24)</td><td>0.00373226 ($26.38)</td></tr><tr><th scope="row">May 2019</th><td>0.41177287 ($2,910.02)</td><td>0.00279438 ($19.75)</td></tr><tr><th scope="row">April 2019</th><td>0.35661254 ($2,520.20)</td><td>0.00046067 ($3.26)</td></tr>                        </tbody>
+                    </table>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $("#sidebarCollapse").on("click", function () {
+                $("#sidebar, #content").toggleClass("active");
+                $(".collapse.in").toggleClass("in");
+                $("a[aria-expanded=true]").attr("aria-expanded", "false");
+            });
+        });
+    </script>
+</body>
+</html>
